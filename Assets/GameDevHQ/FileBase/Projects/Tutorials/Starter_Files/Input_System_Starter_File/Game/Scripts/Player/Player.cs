@@ -9,6 +9,7 @@ namespace Game.Scripts.Player
     [RequireComponent(typeof(CharacterController))]
     public class Player : MonoBehaviour
     {
+        private PlayerInputActions _playerInput;
         private CharacterController _controller;
         private Animator _anim;
         [SerializeField]
@@ -33,6 +34,9 @@ namespace Game.Scripts.Player
             Forklift.onDriveModeEntered += HidePlayer;
             Drone.OnEnterFlightMode += ReleasePlayerControl;
             Drone.onExitFlightmode += ReturnPlayerControl;
+
+            _playerInput = new PlayerInputActions();
+            _playerInput.Player.Enable();
         } 
 
         private void Start()
@@ -57,9 +61,11 @@ namespace Game.Scripts.Player
 
         private void CalcutateMovement()
         {
+            var move = _playerInput.Player.Movement.ReadValue<Vector2>();
+            
             _playerGrounded = _controller.isGrounded;
-            float h = Input.GetAxisRaw("Horizontal");
-            float v = Input.GetAxisRaw("Vertical");
+            float h = move.x;
+            float v = move.y;
 
             transform.Rotate(transform.up, h);
 
@@ -131,4 +137,3 @@ namespace Game.Scripts.Player
 
     }
 }
-
