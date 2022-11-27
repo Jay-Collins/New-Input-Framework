@@ -17,7 +17,7 @@ namespace Game.Scripts.Player
         private bool _playerGrounded;
         [SerializeField]
         private Detonator _detonator;
-        private bool _canMove = true;
+        public bool _canMove = true;
         [SerializeField]
         private CinemachineVirtualCamera _followCam;
         [SerializeField]
@@ -54,13 +54,13 @@ namespace Game.Scripts.Player
 
         private void Update()
         {
-            if (_canMove == true)
-                CalcutateMovement();
-
+            CalcutateMovement();
         }
 
         private void CalcutateMovement()
         {
+            if (!_canMove) return;
+            
             var move = _playerInput.Player.Movement.ReadValue<Vector2>();
             
             _playerGrounded = _controller.isGrounded;
@@ -83,8 +83,7 @@ namespace Game.Scripts.Player
                 velocity.y += -20f * Time.deltaTime;
             }
             
-            _controller.Move(velocity * Time.deltaTime);                      
-
+            _controller.Move(velocity * Time.deltaTime);
         }
 
         private void InteractableZone_onZoneInteractionComplete(InteractableZone zone)
@@ -102,15 +101,18 @@ namespace Game.Scripts.Player
 
         private void ReleasePlayerControl()
         {
-            _canMove = false;
             _followCam.Priority = 9;
+            _playerInput.Player.Disable();
+            _canMove = false;
         }
 
         private void ReturnPlayerControl()
         {
+            Debug.Log("Made it. ReturnPlayerControl");
             _model.SetActive(true);
-            _canMove = true;
             _followCam.Priority = 10;
+            _playerInput.Player.Enable();
+            _canMove = true;
         }
 
         private void HidePlayer()

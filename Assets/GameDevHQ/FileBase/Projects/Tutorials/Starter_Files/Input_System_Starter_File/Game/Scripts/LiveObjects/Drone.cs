@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using Game.Scripts.UI;
+using UnityEngine.InputSystem;
 
 namespace Game.Scripts.LiveObjects
 {
@@ -25,20 +26,36 @@ namespace Game.Scripts.LiveObjects
         private CinemachineVirtualCamera _droneCam;
         [SerializeField]
         private InteractableZone _interactableZone;
-        
+
+        private PlayerInputActions _playerInput;
+        private bool _thrustingUp;
+        private bool _thrustingDown;
 
         public static event Action OnEnterFlightMode;
         public static event Action onExitFlightmode;
 
         private void OnEnable()
         {
+            _playerInput = new PlayerInputActions();
             InteractableZone.onZoneInteractionComplete += EnterFlightMode;
+            
+            _playerInput.Drone.ThrustUp.started += ThrustUp_started;
+            _playerInput.Drone.ThrustUp.canceled += ThrustUp_canceled;
+            
+            _playerInput.Drone.ThrustDown.started += ThrustDown_started;
+            _playerInput.Drone.ThrustDown.canceled += ThrustDown_canceled;
         }
+
+        private void ThrustUp_started(InputAction.CallbackContext obj) => _thrustingUp = true;
+        private void ThrustUp_canceled(InputAction.CallbackContext obj) => _thrustingUp = false;
+        private void ThrustDown_started(InputAction.CallbackContext obj) => _thrustingDown = true;
+        private void ThrustDown_canceled(InputAction.CallbackContext obj) => _thrustingDown = false;
 
         private void EnterFlightMode(InteractableZone zone)
         {
             if (_inFlightMode != true && zone.GetZoneID() == 4) // drone Scene
             {
+                _playerInput.Drone.Enable();
                 _propAnim.SetTrigger("StartProps");
                 _droneCam.Priority = 11;
                 _inFlightMode = true;
@@ -49,7 +66,8 @@ namespace Game.Scripts.LiveObjects
         }
 
         private void ExitFlightMode()
-        {            
+        {           
+            _playerInput.Drone.Disable();
             _droneCam.Priority = 9;
             _inFlightMode = false;
             UIManager.Instance.DroneView(false);            
@@ -66,6 +84,7 @@ namespace Game.Scripts.LiveObjects
                 {
                     _inFlightMode = false;
                     onExitFlightmode?.Invoke();
+                    Debug.Log("Made it - Drone pressed escape ");
                     ExitFlightMode();
                 }
             }
@@ -80,13 +99,15 @@ namespace Game.Scripts.LiveObjects
 
         private void CalculateMovementUpdate()
         {
-            if (Input.GetKey(KeyCode.LeftArrow))
+            var move = _playerInput.Drone.Movement.ReadValue<Vector2>();
+            
+            if (move.x < 0)
             {
                 var tempRot = transform.localRotation.eulerAngles;
                 tempRot.y -= _speed / 3;
                 transform.localRotation = Quaternion.Euler(tempRot);
             }
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (move.x > 0)
             {
                 var tempRot = transform.localRotation.eulerAngles;
                 tempRot.y += _speed / 3;
@@ -96,12 +117,11 @@ namespace Game.Scripts.LiveObjects
 
         private void CalculateMovementFixedUpdate()
         {
-            
-            if (Input.GetKey(KeyCode.Space))
+            if (_thrustingUp)
             {
                 _rigidbody.AddForce(transform.up * _speed, ForceMode.Acceleration);
             }
-            if (Input.GetKey(KeyCode.V))
+            if (_thrustingDown)
             {
                 _rigidbody.AddForce(-transform.up * _speed, ForceMode.Acceleration);
             }
@@ -109,13 +129,15 @@ namespace Game.Scripts.LiveObjects
 
         private void CalculateTilt()
         {
-            if (Input.GetKey(KeyCode.A)) 
+            var move = _playerInput.Drone.Movement.ReadValue<Vector2>();
+            
+            if (move.x < 0) 
                 transform.rotation = Quaternion.Euler(00, transform.localRotation.eulerAngles.y, 30);
-            else if (Input.GetKey(KeyCode.D))
+            else if (move.x > 0)
                 transform.rotation = Quaternion.Euler(0, transform.localRotation.eulerAngles.y, -30);
-            else if (Input.GetKey(KeyCode.W))
+            else if (move.y > 0)
                 transform.rotation = Quaternion.Euler(30, transform.localRotation.eulerAngles.y, 0);
-            else if (Input.GetKey(KeyCode.S))
+            else if (move.y < 0)
                 transform.rotation = Quaternion.Euler(-30, transform.localRotation.eulerAngles.y, 0);
             else 
                 transform.rotation = Quaternion.Euler(0, transform.localRotation.eulerAngles.y, 0);

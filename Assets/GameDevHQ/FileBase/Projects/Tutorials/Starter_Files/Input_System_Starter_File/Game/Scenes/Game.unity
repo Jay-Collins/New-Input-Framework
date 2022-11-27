@@ -6024,6 +6024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _detonator: {fileID: 2496590969500232579}
+  _canMove: 1
   _followCam: {fileID: 1266060213}
   _model: {fileID: 852618543}
 --- !u!4 &359860634
@@ -13201,7 +13202,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 5.68e-43, z: 1.5e-44, w: 3.923636e-39}
+  m_BoundingSphereOverride: {x: 3.030571e-39, y: 9.1835e-41, z: 1.8e-43, w: -1.5799468e+10}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -18385,7 +18386,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972744894}
-  m_LocalRotation: {x: 0.22150615, y: 0.046770528, z: -0.010636742, w: 0.97397864}
+  m_LocalRotation: {x: 0.22150683, y: 0.046706066, z: -0.0106220795, w: 0.97398174}
   m_LocalPosition: {x: -0.48177326, y: 4.5286655, z: -4.833789}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

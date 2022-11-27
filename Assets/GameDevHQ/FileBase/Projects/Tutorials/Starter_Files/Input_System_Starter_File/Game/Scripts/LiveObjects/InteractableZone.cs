@@ -17,37 +17,26 @@ namespace Game.Scripts.LiveObjects
             HoldAction
         }
 
-        [SerializeField]
-        private ZoneType _zoneType;
-        [SerializeField]
-        private int _zoneID;
-        [SerializeField]
-        private int _requiredID;
-        [SerializeField]
-        [Tooltip("Press the (---) Key to .....")]
+        [SerializeField] private ZoneType _zoneType;
+        [SerializeField] private int _zoneID;
+        [SerializeField] private int _requiredID;
+
+        [SerializeField] [Tooltip("Press the (---) Key to .....")]
         private string _displayMessage;
-        [SerializeField]
-        private GameObject[] _zoneItems;
+
+        [SerializeField] private GameObject[] _zoneItems;
         private bool _inZone = false;
         private bool _itemsCollected = false;
         private bool _actionPerformed = false;
-        [SerializeField]
-        private Sprite _inventoryIcon;
-        [SerializeField]
-        private GameObject _marker;
+        [SerializeField] private Sprite _inventoryIcon;
+        [SerializeField] private GameObject _marker;
 
         private static int _currentZoneID = 0;
+
         public static int CurrentZoneID
-        { 
-            get 
-            { 
-               return _currentZoneID; 
-            }
-            set
-            {
-                _currentZoneID = value; 
-                         
-            }
+        {
+            get { return _currentZoneID; }
+            set { _currentZoneID = value; }
         }
 
 
@@ -62,11 +51,57 @@ namespace Game.Scripts.LiveObjects
             InteractableZone.onZoneInteractionComplete += SetMarker;
             _playerInput = new PlayerInputActions();
             _playerInput.Player.Enable();
-            
+
             _playerInput.Player.Interact.started += Interact_started;
-            _playerInput.Player.Interact.canceled += Interact_canceled;
-        }
+            //_playerInput.Player.Interact.canceled += Interact_canceled;
+        } 
         
+        //private void Update()
+        //{
+    //if (_inZone == true)
+                //    {
+
+                //        if (Input.GetKeyDown(_zoneKeyInput) && _keyState != KeyState.PressHold)
+                //        {
+                //            //press
+                //            switch (_zoneType)
+                //            {
+                //                case ZoneType.Collectable:
+                //                    if (_itemsCollected == false)
+                //                    {
+                //                        CollectItems();
+                //                        _itemsCollected = true;
+                //                        UIManager.Instance.DisplayInteractableZoneMessage(false);
+                //                    }
+                //                    break;
+                //                case ZoneType.Action:
+                //                    if (_actionPerformed == false)
+                //                    {
+                //                        PerformAction();
+                //                        _actionPerformed = true;
+                //                        UIManager.Instance.DisplayInteractableZoneMessage(false);
+                //                    }
+                //                    break;
+                //            }
+                //        }
+                //        else if (Input.GetKey(_zoneKeyInput) && _keyState == KeyState.PressHold && _inHoldState == false)
+                //        {
+                //            _inHoldState = true;
+                //            switch (_zoneType)
+                //            {
+                //                case ZoneType.HoldAction:
+                //                    PerformHoldAction();
+                //                    break;
+                //            }
+                //        }
+                //        if (Input.GetKeyUp(_zoneKeyInput) && _keyState == KeyState.PressHold)
+                //        {
+                //            _inHoldState = false;
+                //            onHoldEnded?.Invoke(_zoneID);
+                //        }
+                //    }
+                //} 
+
         private void Interact_started(InputAction.CallbackContext obj)
         {
             if (!_inZone) return;
@@ -95,11 +130,6 @@ namespace Game.Scripts.LiveObjects
                     PerformHoldAction();
                     break;   
             }
-        }
-        
-        private void Interact_canceled(InputAction.CallbackContext obj)
-        {
-            onHoldEnded?.Invoke(_zoneID);
         }
 
 

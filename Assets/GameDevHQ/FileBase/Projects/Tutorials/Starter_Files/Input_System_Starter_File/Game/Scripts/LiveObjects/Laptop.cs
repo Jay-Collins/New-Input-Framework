@@ -51,6 +51,7 @@ namespace Game.Scripts.LiveObjects
                 {
                     _hacked = false;
                     onHackEnded?.Invoke();
+                    Debug.Log("Made it - Laptop Pressed Escape");
                     ResetCameras();
                 }
             }
@@ -85,6 +86,7 @@ namespace Game.Scripts.LiveObjects
                 _progressBar.gameObject.SetActive(false);
                 _progressBar.value = 0;
                 onHackEnded?.Invoke();
+                Debug.Log("Made it - InteractableZone_onHoldEnded");
             }
         }
 

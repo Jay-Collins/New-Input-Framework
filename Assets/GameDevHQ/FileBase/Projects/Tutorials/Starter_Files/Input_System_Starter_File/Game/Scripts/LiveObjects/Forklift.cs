@@ -46,7 +46,8 @@ namespace Game.Scripts.LiveObjects
             _forkliftCam.Priority = 9;            
             _driverModel.SetActive(false);
             onDriveModeExited?.Invoke();
-            
+            Debug.Log("Made it - Forklift ExitDriveMode");
+
         }
 
         private void Update()
