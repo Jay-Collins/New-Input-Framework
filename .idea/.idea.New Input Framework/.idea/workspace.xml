@@ -2,21 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f00a0bf-16ee-4305-b580-c54ab61ba265" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.New Input Framework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.New Input Framework/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/InteractableZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/InteractableZone.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Laptop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Laptop.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInputActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInputActions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Input and ActionMaps/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../New Input System/Assets/Scripts/Delegates and Events/Main.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,6 +78,8 @@
       <updated>1669239763536</updated>
       <workItem from="1669239769454" duration="18623000" />
       <workItem from="1669494864448" duration="8684000" />
+      <workItem from="1669512983438" duration="2334000" />
+      <workItem from="1669667598419" duration="11007000" />
     </task>
     <servers />
   </component>
@@ -97,5 +102,232 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/Player/Player.cs</url>
+          <line>63</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\Player\Player.cs" initialLine="60" containingFunctionPresentation="method 'CalcutateMovement'">
+            <startOffsets>
+              <option value="1974" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2015" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/Player/Player.cs</url>
+          <line>64</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\Player\Player.cs" initialLine="61" containingFunctionPresentation="method 'CalcutateMovement'">
+            <startOffsets>
+              <option value="2028" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2067" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs</url>
+          <line>57</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Forklift.cs" initialLine="57" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="1743" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1780" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs</url>
+          <line>65</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Forklift.cs" initialLine="65" containingFunctionPresentation="method 'CalcutateMovement'">
+            <startOffsets>
+              <option value="1907" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1948" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs</url>
+          <line>66</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Forklift.cs" initialLine="66" containingFunctionPresentation="method 'CalcutateMovement'">
+            <startOffsets>
+              <option value="1961" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2000" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs</url>
+          <line>82</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Forklift.cs" initialLine="82" containingFunctionPresentation="method 'LiftControls'">
+            <startOffsets>
+              <option value="2462" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2490" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs</url>
+          <line>84</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Forklift.cs" initialLine="84" containingFunctionPresentation="method 'LiftControls'">
+            <startOffsets>
+              <option value="2541" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2569" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
+          <line>64</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="64" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="1788" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1825" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
+          <line>82</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="82" containingFunctionPresentation="method 'CalculateMovementUpdate'">
+            <startOffsets>
+              <option value="2301" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2337" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
+          <line>88</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="88" containingFunctionPresentation="method 'CalculateMovementUpdate'">
+            <startOffsets>
+              <option value="2555" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2592" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
+          <line>99</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="99" containingFunctionPresentation="method 'CalculateMovementFixedUpdate'">
+            <startOffsets>
+              <option value="2896" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2928" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
+          <line>103</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="103" containingFunctionPresentation="method 'CalculateMovementFixedUpdate'">
+            <startOffsets>
+              <option value="3053" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3081" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
+          <line>111</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="111" containingFunctionPresentation="method 'CalculateTilt'">
+            <startOffsets>
+              <option value="3265" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3293" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
+          <line>113</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="113" containingFunctionPresentation="method 'CalculateTilt'">
+            <startOffsets>
+              <option value="3414" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3442" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
+          <line>115</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="115" containingFunctionPresentation="method 'CalculateTilt'">
+            <startOffsets>
+              <option value="3562" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3590" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
+          <line>117</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="117" containingFunctionPresentation="method 'CalculateTilt'">
+            <startOffsets>
+              <option value="3709" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3737" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/Player/Player.cs</url>
+          <line>39</line>
+          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\Player\Player.cs" initialLine="40" containingFunctionPresentation="method 'Start'">
+            <startOffsets>
+              <option value="1349" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1350" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

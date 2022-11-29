@@ -33,6 +33,7 @@ namespace Game.Scripts.Player
             Forklift.onDriveModeEntered += HidePlayer;
             Drone.OnEnterFlightMode += ReleasePlayerControl;
             Drone.onExitFlightmode += ReturnPlayerControl;
+            InputManager.movement += CalculateMovement;
         } 
 
         private void Start()
@@ -48,24 +49,29 @@ namespace Game.Scripts.Player
                 Debug.Log("Failed to connect the Animator");
         }
 
-        private void Update()
+        /*private void Update()
         {
             if (_canMove == true)
-                CalcutateMovement();
+                CalcutaleMovement();
 
-        }
+        }*/
 
-        private void CalcutateMovement()
+        private void CalculateMovement(Vector2 move)
         {
+            if (!_canMove) return;
+
             _playerGrounded = _controller.isGrounded;
-            float h = Input.GetAxisRaw("Horizontal");
-            float v = Input.GetAxisRaw("Vertical");
+            /*float h = Input.GetAxisRaw("Horizontal");
+            float v = Input.GetAxisRaw("Vertical");*/
+            
+            float h = move.x;
+            float v = move.y;
 
             transform.Rotate(transform.up, h);
 
             var direction = transform.forward * v;
             var velocity = direction * _speed;
-
+git 
 
             _anim.SetFloat("Speed", Mathf.Abs(velocity.magnitude));
 
@@ -127,8 +133,8 @@ namespace Game.Scripts.Player
             Forklift.onDriveModeEntered -= HidePlayer;
             Drone.OnEnterFlightMode -= ReleasePlayerControl;
             Drone.onExitFlightmode -= ReturnPlayerControl;
+            InputManager.movement -= CalculateMovement;
         }
-
     }
 }
 
