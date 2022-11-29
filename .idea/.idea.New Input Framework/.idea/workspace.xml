@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7f00a0bf-16ee-4305-b580-c54ab61ba265" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.New Input Framework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.New Input Framework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/InteractableZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/InteractableZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Input and ActionMaps/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input and ActionMaps/InputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input and ActionMaps/PlayerInputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input and ActionMaps/PlayerInputActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input and ActionMaps/PlayerInputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input and ActionMaps/PlayerInputActions.inputactions" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,7 @@
       <workItem from="1669239769454" duration="18623000" />
       <workItem from="1669494864448" duration="8684000" />
       <workItem from="1669512983438" duration="2334000" />
-      <workItem from="1669667598419" duration="17794000" />
+      <workItem from="1669667598419" duration="19225000" />
     </task>
     <servers />
   </component>
@@ -131,65 +128,65 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs</url>
-          <line>57</line>
+          <line>63</line>
           <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Forklift.cs" initialLine="57" containingFunctionPresentation="method 'Update'">
             <startOffsets>
-              <option value="1743" />
+              <option value="2046" />
             </startOffsets>
             <endOffsets>
-              <option value="1780" />
+              <option value="2083" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs</url>
-          <line>65</line>
+          <line>89</line>
           <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Forklift.cs" initialLine="65" containingFunctionPresentation="method 'CalcutateMovement'">
             <startOffsets>
-              <option value="1907" />
+              <option value="2811" />
             </startOffsets>
             <endOffsets>
-              <option value="1948" />
+              <option value="2852" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs</url>
-          <line>66</line>
+          <line>90</line>
           <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Forklift.cs" initialLine="66" containingFunctionPresentation="method 'CalcutateMovement'">
             <startOffsets>
-              <option value="1961" />
+              <option value="2865" />
             </startOffsets>
             <endOffsets>
-              <option value="2000" />
+              <option value="2904" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs</url>
-          <line>82</line>
+          <line>114</line>
           <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Forklift.cs" initialLine="82" containingFunctionPresentation="method 'LiftControls'">
             <startOffsets>
-              <option value="2462" />
+              <option value="3580" />
             </startOffsets>
             <endOffsets>
-              <option value="2490" />
+              <option value="3608" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs</url>
-          <line>84</line>
+          <line>116</line>
           <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Forklift.cs" initialLine="84" containingFunctionPresentation="method 'LiftControls'">
             <startOffsets>
-              <option value="2541" />
+              <option value="3659" />
             </startOffsets>
             <endOffsets>
-              <option value="2569" />
+              <option value="3687" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="20" />

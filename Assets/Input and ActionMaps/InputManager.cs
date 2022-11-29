@@ -39,8 +39,16 @@ public class InputManager : MonoBehaviour
         _playerInput.Drone.FlyDown.started += FlyDown_started;
         _playerInput.Drone.FlyDown.canceled += FlyDown_canceled;
 
+        _playerInput.Forklift.LiftUp.started += LiftUp_started;
+        _playerInput.Forklift.LiftUp.canceled += LiftUp_canceled;
+        _playerInput.Forklift.LiftDown.started += LiftDown_started;
+        _playerInput.Forklift.LiftDown.canceled += LiftDown_canceled;
+
         Drone.OnEnterFlightMode += EnableDroneActionmap;
         Drone.onExitFlightmode += DisableDroneActionmap;
+
+        Forklift.onDriveModeEntered += EnableForkliftActionmap;
+        Forklift.onDriveModeExited += DisableForkliftActionmap;
     }
     
     private void Update()
@@ -101,6 +109,32 @@ public class InputManager : MonoBehaviour
     {
         if (_playerInput.Drone.enabled)
             Drone.droneFlyDown = false;
+    }
+    
+    //--- Forklift Actions ---
+
+    private void LiftUp_started(InputAction.CallbackContext objContext)
+    {
+        if (_playerInput.Forklift.enabled)
+            Forklift.forkliftRaiseForks = true;
+    }
+
+    private void LiftUp_canceled(InputAction.CallbackContext objContext)
+    {
+        if (_playerInput.Forklift.enabled)
+            Forklift.forkliftRaiseForks = false;
+    }
+
+    private void LiftDown_started(InputAction.CallbackContext objContext)
+    {
+        if (_playerInput.Forklift.enabled)
+            Forklift.forkliftLowerForks = true;
+    }
+
+    private void LiftDown_canceled(InputAction.CallbackContext objContext)
+    {
+        if (_playerInput.Forklift.enabled)
+            Forklift.forkliftLowerForks = false;
     }
 }
 

@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using Cinemachine;
+using UnityEditor.Timeline.Actions;
+using UnityEngine.InputSystem;
 
 namespace Game.Scripts.LiveObjects
 {
@@ -20,12 +22,17 @@ namespace Game.Scripts.LiveObjects
         [SerializeField]
         private InteractableZone _interactableZone;
 
+        public static bool forkliftRaiseForks;
+        public static bool forkliftLowerForks;
+
         public static event Action onDriveModeEntered;
         public static event Action onDriveModeExited;
 
         private void OnEnable()
         {
             InteractableZone.onZoneInteractionComplete += EnterDriveMode;
+            InputManager.cancelAction += ExitDriveMode;
+            InputManager.movement += CalcutateMovement;
         }
 
         private void EnterDriveMode(InteractableZone zone)
@@ -40,13 +47,13 @@ namespace Game.Scripts.LiveObjects
             }
         }
 
-        private void ExitDriveMode()
+        private void ExitDriveMode(InputAction.CallbackContext objContext)
         {
+            if (!_inDriveMode) return;
             _inDriveMode = false;
             _forkliftCam.Priority = 9;            
             _driverModel.SetActive(false);
             onDriveModeExited?.Invoke();
-            
         }
 
         private void Update()
@@ -54,14 +61,31 @@ namespace Game.Scripts.LiveObjects
             if (_inDriveMode == true)
             {
                 LiftControls();
-                CalcutateMovement();
-                if (Input.GetKeyDown(KeyCode.Escape))
-                    ExitDriveMode();
+                /*if (Input.GetKeyDown(KeyCode.Escape))
+                    ExitDriveMode();*/
             }
+        }
+        
+        private void CalcutateMovement(Vector2 move)
+        {
+            if (!_inDriveMode) return;
+            
+            float h = move.x;
+            float v = move.y;
+            var direction = new Vector3(0, 0, v);
+            var velocity = direction * _speed;
 
+            transform.Translate(velocity * Time.deltaTime);
+
+            if (Mathf.Abs(v) > 0)
+            {
+                var tempRot = transform.rotation.eulerAngles;
+                tempRot.y += h * _speed / 2;
+                transform.rotation = Quaternion.Euler(tempRot);
+            }
         }
 
-        private void CalcutateMovement()
+        /*private void CalcutateMovement(Vector2 move)
         {
             float h = Input.GetAxisRaw("Horizontal");
             float v = Input.GetAxisRaw("Vertical");
@@ -76,15 +100,23 @@ namespace Game.Scripts.LiveObjects
                 tempRot.y += h * _speed / 2;
                 transform.rotation = Quaternion.Euler(tempRot);
             }
-        }
+        }*/
 
         private void LiftControls()
+        {
+            if (forkliftRaiseForks)
+                LiftUpRoutine();
+            else if (forkliftLowerForks)
+                LiftDownRoutine();
+        }
+        
+        /*private void LiftControls()
         {
             if (Input.GetKey(KeyCode.R))
                 LiftUpRoutine();
             else if (Input.GetKey(KeyCode.T))
                 LiftDownRoutine();
-        }
+        }*/
 
         private void LiftUpRoutine()
         {
@@ -114,6 +146,5 @@ namespace Game.Scripts.LiveObjects
         {
             InteractableZone.onZoneInteractionComplete -= EnterDriveMode;
         }
-
     }
 }
