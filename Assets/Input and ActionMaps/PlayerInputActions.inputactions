@@ -104,7 +104,7 @@
                     "name": "",
                     "id": "ccf38401-736b-498b-990b-8719246bd806",
                     "path": "<Keyboard>/e",
-                    "interactions": "Hold(duration=0.4,pressPoint=0.5)",
+                    "interactions": "Hold(duration=0.6,pressPoint=0.4),Tap(duration=0.399,pressPoint=0.5)",
                     "processors": "",
                     "groups": "",
                     "action": "Interact",

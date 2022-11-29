@@ -1143,6 +1143,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 9d76b14ce284b4364bd7dfb5511ef560,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9d76b14ce284b4364bd7dfb5511ef560,
+        type: 3}
       propertyPath: m_TagString
       value: Liftable
       objectReference: {fileID: 0}
@@ -13214,8 +13219,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.499231e+28, y: 7.2064716e+31, z: 2.6897688e+32,
-    w: 1.8317898e+25}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: NaN, z: 0, w: -5.3848293e-27}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

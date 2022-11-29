@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7f00a0bf-16ee-4305-b580-c54ab61ba265" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.New Input Framework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.New Input Framework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Forklift.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Crate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Crate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Input and ActionMaps/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input and ActionMaps/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input and ActionMaps/PlayerInputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input and ActionMaps/PlayerInputActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input and ActionMaps/PlayerInputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input and ActionMaps/PlayerInputActions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +17,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Input and ActionMaps/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../New Input System/Assets/Scripts/Delegates and Events/Main.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -73,7 +78,9 @@
       <workItem from="1669239769454" duration="18623000" />
       <workItem from="1669494864448" duration="8684000" />
       <workItem from="1669512983438" duration="2334000" />
-      <workItem from="1669667598419" duration="19225000" />
+      <workItem from="1669667598419" duration="22264000" />
+      <workItem from="1669692454929" duration="1785000" />
+      <workItem from="1669752937065" duration="5056000" />
     </task>
     <servers />
   </component>

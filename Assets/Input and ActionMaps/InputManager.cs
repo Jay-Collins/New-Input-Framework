@@ -4,18 +4,16 @@ using Game.Scripts.LiveObjects;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 
 public class InputManager : MonoBehaviour
 {
     public static Action<Vector2> movement;
     public static Action<InputAction.CallbackContext> interactStarted;
     public static Action<InputAction.CallbackContext> interactCanceled;
+    public static Action<InputAction.CallbackContext> interactPerformed;
     public static Action<InputAction.CallbackContext> cancelAction;
-    public static Action<InputAction.CallbackContext> droneFlyUpStarted;
-    public static Action<InputAction.CallbackContext> droneFlyUpCanceled;
-    public static Action<InputAction.CallbackContext> droneFlyDownStarted;
-    public static Action<InputAction.CallbackContext> droneFlyDownCanceled;
-        
+
     private PlayerInputActions _playerInput;
     
     public static string interactKey;
@@ -30,8 +28,9 @@ public class InputManager : MonoBehaviour
     {
         _playerInput = new PlayerInputActions();
         _playerInput.GeneralActions.Enable();
-        _playerInput.GeneralActions.Interact.started += Interact_Started;
-        _playerInput.GeneralActions.Interact.canceled += Interact_Canceled;
+        _playerInput.GeneralActions.Interact.started += Interact_started;
+        _playerInput.GeneralActions.Interact.canceled += Interact_canceled;
+        _playerInput.GeneralActions.Interact.performed += Interact_performed;
         _playerInput.GeneralActions.Cancel.performed += Cancel_performed;
 
         _playerInput.Drone.FlyUp.started += FlyUp_started;
@@ -68,16 +67,22 @@ public class InputManager : MonoBehaviour
         movement(move);
     }
 
-    private void Interact_Started(InputAction.CallbackContext objContext)
+    private void Interact_started(InputAction.CallbackContext objContext)
     {
         if (_playerInput.GeneralActions.enabled)
             interactStarted(objContext);
     }
 
-    private void Interact_Canceled(InputAction.CallbackContext objContext)
+    private void Interact_canceled(InputAction.CallbackContext objContext)
     {
         if (_playerInput.GeneralActions.enabled)
             interactCanceled(objContext);
+    }
+
+    private void Interact_performed(InputAction.CallbackContext objContext)
+    {
+        if (_playerInput.GeneralActions.enabled)
+            interactPerformed(objContext);
     }
 
     private void Cancel_performed(InputAction.CallbackContext objContext)
