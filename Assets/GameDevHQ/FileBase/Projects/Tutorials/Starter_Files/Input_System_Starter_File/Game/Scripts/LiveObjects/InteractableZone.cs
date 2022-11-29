@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Game.Scripts.UI;
+using UnityEngine.InputSystem;
 
 
 namespace Game.Scripts.LiveObjects
@@ -14,12 +15,6 @@ namespace Game.Scripts.LiveObjects
             Collectable,
             Action,
             HoldAction
-        }
-
-        private enum KeyState
-        {
-            Press,
-            PressHold
         }
 
         [SerializeField]
@@ -39,15 +34,10 @@ namespace Game.Scripts.LiveObjects
         [SerializeField]
         private Sprite _inventoryIcon;
         [SerializeField]
-        private KeyCode _zoneKeyInput;
-        [SerializeField]
-        private KeyState _keyState;
-        [SerializeField]
         private GameObject _marker;
 
-        private bool _inHoldState = false;
-
         private static int _currentZoneID = 0;
+        
         public static int CurrentZoneID
         { 
             get 
@@ -56,8 +46,7 @@ namespace Game.Scripts.LiveObjects
             }
             set
             {
-                _currentZoneID = value; 
-                         
+                _currentZoneID = value;
             }
         }
 
@@ -69,7 +58,8 @@ namespace Game.Scripts.LiveObjects
         private void OnEnable()
         {
             InteractableZone.onZoneInteractionComplete += SetMarker;
-
+            InputManager.interactStarted += InteractStarted;
+            InputManager.interactCanceled += InteractCanceled;
         }
 
         private void OnTriggerEnter(Collider other)
@@ -84,11 +74,11 @@ namespace Game.Scripts.LiveObjects
                             _inZone = true;
                             if (_displayMessage != null)
                             {
-                                string message = $"Press the {_zoneKeyInput.ToString()} key to {_displayMessage}.";
+                                string message = $"Press the {InputManager.interactKey} key to {_displayMessage}.";
                                 UIManager.Instance.DisplayInteractableZoneMessage(true, message);
                             }
                             else
-                                UIManager.Instance.DisplayInteractableZoneMessage(true, $"Press the {_zoneKeyInput.ToString()} key to collect");
+                                UIManager.Instance.DisplayInteractableZoneMessage(true, $"Press the {InputManager.interactKey} key to collect");
                         }
                         break;
 
@@ -98,11 +88,11 @@ namespace Game.Scripts.LiveObjects
                             _inZone = true;
                             if (_displayMessage != null)
                             {
-                                string message = $"Press the {_zoneKeyInput.ToString()} key to {_displayMessage}.";
+                                string message = $"Press the {InputManager.interactKey} key to {_displayMessage}.";
                                 UIManager.Instance.DisplayInteractableZoneMessage(true, message);
                             }
                             else
-                                UIManager.Instance.DisplayInteractableZoneMessage(true, $"Press the {_zoneKeyInput.ToString()} key to perform action");
+                                UIManager.Instance.DisplayInteractableZoneMessage(true, $"Press the {InputManager.interactKey} key to perform action");
                         }
                         break;
 
@@ -110,16 +100,53 @@ namespace Game.Scripts.LiveObjects
                         _inZone = true;
                         if (_displayMessage != null)
                         {
-                            string message = $"Press the {_zoneKeyInput.ToString()} key to {_displayMessage}.";
+                            string message = $"Press the {InputManager.interactKey} key to {_displayMessage}.";
                             UIManager.Instance.DisplayInteractableZoneMessage(true, message);
                         }
                         else
-                            UIManager.Instance.DisplayInteractableZoneMessage(true, $"Hold the {_zoneKeyInput.ToString()} key to perform action");
+                            UIManager.Instance.DisplayInteractableZoneMessage(true, $"Hold the {InputManager.interactKey} key to perform action");
                         break;
                 }
             }
         }
 
+        private void InteractStarted(InputAction.CallbackContext objContext)
+        {
+            if (_inZone == true)
+            {
+                //press
+                switch (_zoneType)
+                {
+                    case ZoneType.Collectable:
+                        if (_itemsCollected == false)
+                        {
+                            CollectItems();
+                            _itemsCollected = true;
+                            UIManager.Instance.DisplayInteractableZoneMessage(false);
+                        }
+                        break;
+
+                    case ZoneType.Action:
+                        if (_actionPerformed == false)
+                        {
+                            PerformAction();
+                            _actionPerformed = true;
+                            UIManager.Instance.DisplayInteractableZoneMessage(false);
+                        }
+                        break;
+                    case ZoneType.HoldAction:
+                        PerformHoldAction();
+                        break;   
+                }
+            }
+        }
+
+        private void InteractCanceled(InputAction.CallbackContext objContext)
+        {
+            onHoldEnded?.Invoke(_zoneID);
+        }
+        
+        /*
         private void Update()
         {
             if (_inZone == true)
@@ -171,7 +198,7 @@ namespace Game.Scripts.LiveObjects
 
                
             }
-        }
+        }*/
        
         private void CollectItems()
         {
@@ -252,7 +279,8 @@ namespace Game.Scripts.LiveObjects
         private void OnDisable()
         {
             InteractableZone.onZoneInteractionComplete -= SetMarker;
-        }       
-        
+        }
     }
 }
+
+

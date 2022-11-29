@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
+using UnityEngine.InputSystem;
 
 namespace Game.Scripts.LiveObjects
 {
@@ -27,37 +28,32 @@ namespace Game.Scripts.LiveObjects
         {
             InteractableZone.onHoldStarted += InteractableZone_onHoldStarted;
             InteractableZone.onHoldEnded += InteractableZone_onHoldEnded;
+            InputManager.cancelAction += ResetCameras;
+            InputManager.interactStarted += CycleCameras;
         }
 
-        private void Update()
+        private void CycleCameras(InputAction.CallbackContext objContext)
         {
             if (_hacked == true)
             {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    var previous = _activeCamera;
-                    _activeCamera++;
+                var previous = _activeCamera;
+                _activeCamera++;
 
 
-                    if (_activeCamera >= _cameras.Length)
-                        _activeCamera = 0;
+                if (_activeCamera >= _cameras.Length)
+                    _activeCamera = 0;
 
 
-                    _cameras[_activeCamera].Priority = 11;
-                    _cameras[previous].Priority = 9;
-                }
-
-                if (Input.GetKeyDown(KeyCode.Escape))
-                {
-                    _hacked = false;
-                    onHackEnded?.Invoke();
-                    ResetCameras();
-                }
+                _cameras[_activeCamera].Priority = 11;
+                _cameras[previous].Priority = 9;
             }
         }
 
-        void ResetCameras()
+        private void ResetCameras(InputAction.CallbackContext objContext)
         {
+            _hacked = false;
+            onHackEnded?.Invoke();   
+            
             foreach (var cam in _cameras)
             {
                 cam.Priority = 9;
@@ -116,3 +112,4 @@ namespace Game.Scripts.LiveObjects
     }
 
 }
+
