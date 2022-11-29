@@ -136,34 +136,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""Laptop"",
-            ""id"": ""b87b6416-f8e1-4d1b-9cb0-463c70af9e47"",
-            ""actions"": [
-                {
-                    ""name"": ""ChangeCamera"",
-                    ""type"": ""Button"",
-                    ""id"": ""7999abc5-f529-450d-aa15-fd49e22670c0"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""ca74c66f-02d6-40e9-8fed-a58857ff8e10"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": ""Hold"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ChangeCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
             ""name"": ""Drone"",
             ""id"": ""bbbf7012-47b1-49e3-a686-13947a40f3da"",
             ""actions"": [
@@ -267,9 +239,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_GeneralActions_Movement = m_GeneralActions.FindAction("Movement", throwIfNotFound: true);
         m_GeneralActions_Cancel = m_GeneralActions.FindAction("Cancel", throwIfNotFound: true);
         m_GeneralActions_Interact = m_GeneralActions.FindAction("Interact", throwIfNotFound: true);
-        // Laptop
-        m_Laptop = asset.FindActionMap("Laptop", throwIfNotFound: true);
-        m_Laptop_ChangeCamera = m_Laptop.FindAction("ChangeCamera", throwIfNotFound: true);
         // Drone
         m_Drone = asset.FindActionMap("Drone", throwIfNotFound: true);
         m_Drone_FlyUp = m_Drone.FindAction("FlyUp", throwIfNotFound: true);
@@ -383,39 +352,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     }
     public GeneralActionsActions @GeneralActions => new GeneralActionsActions(this);
 
-    // Laptop
-    private readonly InputActionMap m_Laptop;
-    private ILaptopActions m_LaptopActionsCallbackInterface;
-    private readonly InputAction m_Laptop_ChangeCamera;
-    public struct LaptopActions
-    {
-        private @PlayerInputActions m_Wrapper;
-        public LaptopActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @ChangeCamera => m_Wrapper.m_Laptop_ChangeCamera;
-        public InputActionMap Get() { return m_Wrapper.m_Laptop; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(LaptopActions set) { return set.Get(); }
-        public void SetCallbacks(ILaptopActions instance)
-        {
-            if (m_Wrapper.m_LaptopActionsCallbackInterface != null)
-            {
-                @ChangeCamera.started -= m_Wrapper.m_LaptopActionsCallbackInterface.OnChangeCamera;
-                @ChangeCamera.performed -= m_Wrapper.m_LaptopActionsCallbackInterface.OnChangeCamera;
-                @ChangeCamera.canceled -= m_Wrapper.m_LaptopActionsCallbackInterface.OnChangeCamera;
-            }
-            m_Wrapper.m_LaptopActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @ChangeCamera.started += instance.OnChangeCamera;
-                @ChangeCamera.performed += instance.OnChangeCamera;
-                @ChangeCamera.canceled += instance.OnChangeCamera;
-            }
-        }
-    }
-    public LaptopActions @Laptop => new LaptopActions(this);
-
     // Drone
     private readonly InputActionMap m_Drone;
     private IDroneActions m_DroneActionsCallbackInterface;
@@ -502,10 +438,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
-    }
-    public interface ILaptopActions
-    {
-        void OnChangeCamera(InputAction.CallbackContext context);
     }
     public interface IDroneActions
     {

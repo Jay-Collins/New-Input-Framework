@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7f00a0bf-16ee-4305-b580-c54ab61ba265" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.New Input Framework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.New Input Framework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/InteractableZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/InteractableZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Laptop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Laptop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input and ActionMaps/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input and ActionMaps/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input and ActionMaps/PlayerInputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input and ActionMaps/PlayerInputActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input and ActionMaps/PlayerInputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input and ActionMaps/PlayerInputActions.inputactions" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,7 @@
       <workItem from="1669239769454" duration="18623000" />
       <workItem from="1669494864448" duration="8684000" />
       <workItem from="1669512983438" duration="2334000" />
-      <workItem from="1669667598419" duration="11589000" />
+      <workItem from="1669667598419" duration="17794000" />
     </task>
     <servers />
   </component>
@@ -194,117 +196,104 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
-          <line>64</line>
-          <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="64" containingFunctionPresentation="method 'Update'">
-            <startOffsets>
-              <option value="1788" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1825" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
-          <line>82</line>
+          <line>92</line>
           <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="82" containingFunctionPresentation="method 'CalculateMovementUpdate'">
             <startOffsets>
-              <option value="2301" />
+              <option value="2769" />
             </startOffsets>
             <endOffsets>
-              <option value="2337" />
+              <option value="2784" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
-          <line>88</line>
+          <line>98</line>
           <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="88" containingFunctionPresentation="method 'CalculateMovementUpdate'">
             <startOffsets>
-              <option value="2555" />
+              <option value="3002" />
             </startOffsets>
             <endOffsets>
-              <option value="2592" />
+              <option value="3017" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
-          <line>99</line>
+          <line>117</line>
           <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="99" containingFunctionPresentation="method 'CalculateMovementFixedUpdate'">
             <startOffsets>
-              <option value="2896" />
+              <option value="3639" />
             </startOffsets>
             <endOffsets>
-              <option value="2928" />
+              <option value="3671" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
-          <line>103</line>
+          <line>121</line>
           <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="103" containingFunctionPresentation="method 'CalculateMovementFixedUpdate'">
             <startOffsets>
-              <option value="3053" />
+              <option value="3796" />
             </startOffsets>
             <endOffsets>
-              <option value="3081" />
+              <option value="3824" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
-          <line>111</line>
+          <line>131</line>
           <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="111" containingFunctionPresentation="method 'CalculateTilt'">
             <startOffsets>
-              <option value="3265" />
+              <option value="4075" />
             </startOffsets>
             <endOffsets>
-              <option value="3293" />
+              <option value="4090" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
-          <line>113</line>
+          <line>133</line>
           <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="113" containingFunctionPresentation="method 'CalculateTilt'">
             <startOffsets>
-              <option value="3414" />
+              <option value="4211" />
             </startOffsets>
             <endOffsets>
-              <option value="3442" />
+              <option value="4226" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
-          <line>115</line>
+          <line>135</line>
           <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="115" containingFunctionPresentation="method 'CalculateTilt'">
             <startOffsets>
-              <option value="3562" />
+              <option value="4346" />
             </startOffsets>
             <endOffsets>
-              <option value="3590" />
+              <option value="4361" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameDevHQ/FileBase/Projects/Tutorials/Starter_Files/Input_System_Starter_File/Game/Scripts/LiveObjects/Drone.cs</url>
-          <line>117</line>
+          <line>137</line>
           <properties documentPath="C:\Users\ablue\OneDrive\Desktop\Unity Projects\New Input Framework\Assets\GameDevHQ\FileBase\Projects\Tutorials\Starter_Files\Input_System_Starter_File\Game\Scripts\LiveObjects\Drone.cs" initialLine="117" containingFunctionPresentation="method 'CalculateTilt'">
             <startOffsets>
-              <option value="3709" />
+              <option value="4480" />
             </startOffsets>
             <endOffsets>
-              <option value="3737" />
+              <option value="4495" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="29" />

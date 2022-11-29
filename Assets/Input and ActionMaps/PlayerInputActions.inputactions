@@ -114,34 +114,6 @@
             ]
         },
         {
-            "name": "Laptop",
-            "id": "b87b6416-f8e1-4d1b-9cb0-463c70af9e47",
-            "actions": [
-                {
-                    "name": "ChangeCamera",
-                    "type": "Button",
-                    "id": "7999abc5-f529-450d-aa15-fd49e22670c0",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "ca74c66f-02d6-40e9-8fed-a58857ff8e10",
-                    "path": "<Keyboard>/e",
-                    "interactions": "Hold",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeCamera",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
             "name": "Drone",
             "id": "bbbf7012-47b1-49e3-a686-13947a40f3da",
             "actions": [

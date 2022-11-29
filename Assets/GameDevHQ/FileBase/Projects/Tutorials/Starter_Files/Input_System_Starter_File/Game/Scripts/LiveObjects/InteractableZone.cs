@@ -36,6 +36,8 @@ namespace Game.Scripts.LiveObjects
         [SerializeField]
         private GameObject _marker;
 
+        private bool _buttonHeld;
+
         private static int _currentZoneID = 0;
         
         public static int CurrentZoneID
@@ -135,6 +137,7 @@ namespace Game.Scripts.LiveObjects
                         }
                         break;
                     case ZoneType.HoldAction:
+                        _buttonHeld = true;
                         PerformHoldAction();
                         break;   
                 }
@@ -143,7 +146,10 @@ namespace Game.Scripts.LiveObjects
 
         private void InteractCanceled(InputAction.CallbackContext objContext)
         {
+            if (!_buttonHeld) return;
+            
             onHoldEnded?.Invoke(_zoneID);
+            _buttonHeld = false;
         }
         
         /*
