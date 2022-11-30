@@ -145,6 +145,8 @@ namespace Game.Scripts.LiveObjects
         private void OnDisable()
         {
             InteractableZone.onZoneInteractionComplete -= EnterDriveMode;
+            InputManager.cancelAction -= ExitDriveMode;
+            InputManager.movement -= CalcutateMovement;
         }
     }
 }

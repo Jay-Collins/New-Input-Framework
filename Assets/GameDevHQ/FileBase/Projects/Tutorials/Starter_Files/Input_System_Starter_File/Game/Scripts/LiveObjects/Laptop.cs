@@ -108,8 +108,9 @@ namespace Game.Scripts.LiveObjects
         {
             InteractableZone.onHoldStarted -= InteractableZone_onHoldStarted;
             InteractableZone.onHoldEnded -= InteractableZone_onHoldEnded;
+            InputManager.cancelAction -= ResetCameras;
+            InputManager.interactStarted -= CycleCameras;
         }
     }
 
 }
-

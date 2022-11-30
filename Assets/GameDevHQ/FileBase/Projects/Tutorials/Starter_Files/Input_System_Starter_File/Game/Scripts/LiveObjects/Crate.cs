@@ -25,7 +25,7 @@ namespace Game.Scripts.LiveObjects
         private void OnEnable()
         {
             InteractableZone.onZoneInteractionComplete += InteractableZone_onZoneInteractionComplete;
-            InputManager.interactPerformed += BreakTheBox;
+            InputManager.interactHoldPerformed += BreakTheBox;
         }
         
         /*private void InteractableZone_onZoneInteractionComplete(InteractableZone zone)
@@ -131,7 +131,7 @@ namespace Game.Scripts.LiveObjects
         private void OnDisable()
         {
             InteractableZone.onZoneInteractionComplete -= InteractableZone_onZoneInteractionComplete;
-            InputManager.interactPerformed -= BreakTheBox;
+            InputManager.interactHoldPerformed -= BreakTheBox;
         }
         
     }

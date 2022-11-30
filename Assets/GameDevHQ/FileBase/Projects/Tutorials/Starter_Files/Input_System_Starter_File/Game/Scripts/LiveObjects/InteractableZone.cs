@@ -157,7 +157,6 @@ namespace Game.Scripts.LiveObjects
         {
             if (_inZone == true)
             {
-
                 if (Input.GetKeyDown(_zoneKeyInput) && _keyState != KeyState.PressHold)
                 {
                     //press
@@ -171,7 +170,6 @@ namespace Game.Scripts.LiveObjects
                                 UIManager.Instance.DisplayInteractableZoneMessage(false);
                             }
                             break;
-
                         case ZoneType.Action:
                             if (_actionPerformed == false)
                             {
@@ -185,9 +183,7 @@ namespace Game.Scripts.LiveObjects
                 else if (Input.GetKey(_zoneKeyInput) && _keyState == KeyState.PressHold && _inHoldState == false)
                 {
                     _inHoldState = true;
-
                    
-
                     switch (_zoneType)
                     {                      
                         case ZoneType.HoldAction:
@@ -195,13 +191,11 @@ namespace Game.Scripts.LiveObjects
                             break;           
                     }
                 }
-
                 if (Input.GetKeyUp(_zoneKeyInput) && _keyState == KeyState.PressHold)
                 {
                     _inHoldState = false;
                     onHoldEnded?.Invoke(_zoneID);
                 }
-
                
             }
         }*/
@@ -285,8 +279,8 @@ namespace Game.Scripts.LiveObjects
         private void OnDisable()
         {
             InteractableZone.onZoneInteractionComplete -= SetMarker;
+            InputManager.interactStarted -= InteractStarted;
+            InputManager.interactCanceled -= InteractCanceled;
         }
     }
 }
-
-

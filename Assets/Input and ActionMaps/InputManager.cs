@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
 using Game.Scripts.LiveObjects;
+using Game.Scripts.Player;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,7 +12,7 @@ public class InputManager : MonoBehaviour
     public static Action<Vector2> movement;
     public static Action<InputAction.CallbackContext> interactStarted;
     public static Action<InputAction.CallbackContext> interactCanceled;
-    public static Action<InputAction.CallbackContext> interactPerformed;
+    public static Action<InputAction.CallbackContext> interactHoldPerformed;
     public static Action<InputAction.CallbackContext> cancelAction;
 
     private PlayerInputActions _playerInput;
@@ -30,7 +31,7 @@ public class InputManager : MonoBehaviour
         _playerInput.GeneralActions.Enable();
         _playerInput.GeneralActions.Interact.started += Interact_started;
         _playerInput.GeneralActions.Interact.canceled += Interact_canceled;
-        _playerInput.GeneralActions.Interact.performed += Interact_performed;
+        _playerInput.GeneralActions.InteractHold.performed += InteractHold_performed;
         _playerInput.GeneralActions.Cancel.performed += Cancel_performed;
 
         _playerInput.Drone.FlyUp.started += FlyUp_started;
@@ -52,7 +53,8 @@ public class InputManager : MonoBehaviour
     
     private void Update()
     {
-        PlayerMovement();
+        if (_playerInput.GeneralActions.enabled)
+            PlayerMovement();
     }
     
     private void EnableDroneActionmap() => _playerInput.Drone.Enable();
@@ -79,10 +81,10 @@ public class InputManager : MonoBehaviour
             interactCanceled(objContext);
     }
 
-    private void Interact_performed(InputAction.CallbackContext objContext)
+    private void InteractHold_performed(InputAction.CallbackContext objContext)
     {
         if (_playerInput.GeneralActions.enabled)
-            interactPerformed(objContext);
+            interactHoldPerformed(objContext);
     }
 
     private void Cancel_performed(InputAction.CallbackContext objContext)
@@ -141,6 +143,30 @@ public class InputManager : MonoBehaviour
         if (_playerInput.Forklift.enabled)
             Forklift.forkliftLowerForks = false;
     }
+    
+    // --- On Disable ---
+
+    private void OnDisable()
+    {
+        _playerInput.GeneralActions.Interact.started -= Interact_started;
+        _playerInput.GeneralActions.Interact.canceled -= Interact_canceled;
+        _playerInput.GeneralActions.InteractHold.performed -= InteractHold_performed;
+        _playerInput.GeneralActions.Cancel.performed -= Cancel_performed;
+
+        _playerInput.Drone.FlyUp.started -= FlyUp_started;
+        _playerInput.Drone.FlyUp.canceled -= FlyUp_canceled;
+        _playerInput.Drone.FlyDown.started -= FlyDown_started;
+        _playerInput.Drone.FlyDown.canceled -= FlyDown_canceled;
+
+        _playerInput.Forklift.LiftUp.started -= LiftUp_started;
+        _playerInput.Forklift.LiftUp.canceled -= LiftUp_canceled;
+        _playerInput.Forklift.LiftDown.started -= LiftDown_started;
+        _playerInput.Forklift.LiftDown.canceled -= LiftDown_canceled;
+
+        Drone.OnEnterFlightMode -= EnableDroneActionmap;
+        Drone.onExitFlightmode -= DisableDroneActionmap;
+
+        Forklift.onDriveModeEntered -= EnableForkliftActionmap;
+        Forklift.onDriveModeExited -= DisableForkliftActionmap;
+    }
 }
-
-
